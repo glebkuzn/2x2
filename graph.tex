@@ -1,36 +1,21 @@
 \documentclass[11pt,a4paper]{report}
+\usepackage{mathtext}
+\usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
-\usepackage{mathtext}
-\usepackage{cmap}
-\usepackage[T2A]{fontenc}
-\usepackage{amsmath, amsthm,amsfonts,mathabx}
-\usepackage{amssymb}
-\usepackage{array}
-\usepackage{floatflt}
-\usepackage{titlesec}
-\usepackage{epigraph}
-\usepackage{floatflt,indentfirst}
-\usepackage{graphicx, tabularx}
-\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm,includefoot,footskip=1.5cm]{geometry}
-
+\usepackage{mathtools}
+\usepackage{cmap,amsmath, amsthm,amsfonts,mathabx,amssymb,array,floatflt,titlesec,epigraph,indentfirst,graphicx,tabularx}
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm,includefoot,footskip=0.5cm]{geometry}
 \setlength{\parskip}{2pt}
 
 \titleformat{\section}{\centering\normalfont\bfseries}{}{1em}{}
 
-\newcommand{\dive}{\mathop{\raisebox{-2pt}{\vdots}}}
-\title{Курс спецматематики в листках для 7 класса}
-\author{Автор: Иванова Елена Юрьевна\\
-	Редактор: Кузнецов Глеб Михайлович}
-
-\date{\today}
-\newcommand{\ndive}{\mathop{\raisebox{-2pt}{\lefteqn{\vdots}}\setminus}}
-
 \setlength\epigraphrule{0pt}
-
-\setlength\epigraphwidth{.4\textwidth}
+\setlength\epigraphwidth{.5\textwidth}
 
 \newenvironment{prf}[1][\textbf{\textit{Решение}}]{\par\indent\pushQED{\qed}\itshape#1. \normalfont\ignorespaces}{\popQED}
+\newenvironment{dok}[1][\textbf{\textit{Доказательство}}]{\par\indent\pushQED{\qed}\itshape#1. \normalfont\ignorespaces}{\popQED}
+\newenvironment{prim}[1][\textbf{\textit{Примечание}}]{\par\indent\pushQED{\qed}\itshape#1. \normalfont\ignorespaces}
 
 \newtheoremstyle{myrmk}{3pt}{3pt}{\rmfamily}{\parindent}{\itshape}{.}{.5em}{}
 \theoremstyle{myrmk}
@@ -47,6 +32,7 @@
 \theoremstyle{mydfn}
 \newtheorem{dfn}{Определение}
 \newtheorem{ex}{Упражнение}
+\newtheorem{prop}{Свойство}
 
 \newcommand{\ris}[3][]{
 	\begin{floatingfigure}[#1]{#3 cm}
@@ -66,6 +52,17 @@
 	\textbf{#2}
 \end{center}
 	}
+ 
+\newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
+\newcommand{\ndel}{\mathop{\raisebox{-2pt}{\lefteqn{\vdots}}\setminus}}
+% \newcommand{\del}{~\vdots~}
+% \newcommand{\ndel}{~\mathrlap{\backslash}\vdots~}
+ 
+\title{Курс спецматематики в листках для 7 класса}
+\author{Автор: Иванова Елена Юрьевна\\
+	Редактор: Кузнецов Глеб Михайлович}
+
+\date{\today}
 
 \begin{document}
 		\maketitle
@@ -82,14 +79,16 @@
 \input{./part/1.7}
 \input{./part/1.8}
 \input{./part/1.9}
-%\chapter{Принцип Дирихле}
-%\input{./part/2.1}
-%\input{./part/2.3}
-%\input{./part/2.4}
-%\chapter{Комбинаторика}
-%\input{./part/3.1}
-%\input{./part/3.2}
-%\input{./part/3.3}
-%\input{./part/3.4}
+\chapter{Принцип Дирихле}
+\input{./part/2.1}
+\input{./part/2.3}
+\input{./part/2.4}
+\chapter{Комбинаторика}
+\input{./part/3.1}
+\input{./part/3.2}
+\input{./part/3.3}
+\input{./part/3.4}
+\chapter{Теория Чисел}
+\input{./part/4.1}
 
 \end{document}
