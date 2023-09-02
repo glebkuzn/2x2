@@ -4,7 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
 \usepackage{mathtools}
-\usepackage{cmap,amsmath, amsthm,amsfonts,mathabx,amssymb,array,floatflt,titlesec,epigraph,indentfirst,graphicx,tabularx}
+\usepackage{cmap,amsmath, amsthm,amsfonts,mathabx,amssymb,array,floatflt,titlesec,epigraph,indentfirst,graphicx,tabularx,subcaption}
 \usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm,includefoot,footskip=0.5cm]{geometry}
 \setlength{\parskip}{2pt}
 
@@ -15,12 +15,13 @@
 
 \newenvironment{prf}[1][\textbf{\textit{Решение}}]{\par\indent\pushQED{\qed}\itshape#1. \normalfont\ignorespaces}{\popQED}
 \newenvironment{dok}[1][\textbf{\textit{Доказательство}}]{\par\indent\pushQED{\qed}\itshape#1. \normalfont\ignorespaces}{\popQED}
-\newenvironment{prim}[1][\textbf{\textit{Примечание}}]{\par\indent\pushQED{\qed}\itshape#1. \normalfont\ignorespaces}
+\newenvironment{prim}[1][\textbf{\textit{Примечание}}]{\par\indent\pushQED{\qed}\itshape#1. \normalfont\ignorespaces}{}
+\newenvironment{samp}[1][\textbf{\textit{Пример}}]{\par\indent\pushQED{\qed}\itshape#1. \normalfont\ignorespaces}{}
 
 \newtheoremstyle{myrmk}{3pt}{3pt}{\rmfamily}{\parindent}{\itshape}{.}{.5em}{}
 \theoremstyle{myrmk}
 \newtheorem{itm}{}[chapter]
-\newtheorem{rmk}[itm]{Remark}
+% \newtheorem{rmk}[itm]{Remark}
 
 \newtheoremstyle{mypln}{3pt}{3pt}{}{\parindent}{\bfseries}{.}{.5em}{}
 \theoremstyle{mypln}
