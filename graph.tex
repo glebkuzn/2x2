@@ -1,12 +1,17 @@
 \documentclass[11pt,a4paper]{report}
+\usepackage[pdftex]{hyperref}
 \usepackage{mathtext}
+\usepackage{cmap}
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
 \usepackage{mathtools}
-\usepackage{cmap,amsmath, amsthm,amsfonts,mathabx,amssymb,array,floatflt,titlesec,epigraph,indentfirst,graphicx,tabularx,subcaption}
+\usepackage{amsmath, amsthm,amsfonts,mathabx,amssymb,array,floatflt,titlesec,epigraph,indentfirst,graphicx,tabularx,subcaption}
 \usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm,includefoot,footskip=0.5cm]{geometry}
+
 \setlength{\parskip}{2pt}
+
+\setlength{\intextsep}{4pt}
 
 \titleformat{\section}{\centering\normalfont\bfseries}{}{1em}{}
 
@@ -21,7 +26,6 @@
 \newtheoremstyle{myrmk}{3pt}{3pt}{\rmfamily}{\parindent}{\itshape}{.}{.5em}{}
 \theoremstyle{myrmk}
 \newtheorem{itm}{}[chapter]
-% \newtheorem{rmk}[itm]{Remark}
 
 \newtheoremstyle{mypln}{3pt}{3pt}{}{\parindent}{\bfseries}{.}{.5em}{}
 \theoremstyle{mypln}
@@ -34,32 +38,27 @@
 \newtheorem{dfn}{Определение}
 \newtheorem{ex}{Упражнение}
 \newtheorem{prop}{Свойство}
-
-\newcommand{\ris}[3][]{
-	\begin{floatingfigure}[#1]{#3 cm}
-			\includegraphics[width=#3 cm]{./img/#2}
-	\end{floatingfigure}
-}
 	
 \newcommand{\head}[2]
 {\newpage
-		\begin{minipage}[h]{0,1\linewidth}
-			\includegraphics[width=1\linewidth]{./img/logo}
-		\end{minipage}
-	\begin{minipage}{1\linewidth}
-		\textbf{Творческая лаборатория <<ДваждыДва>> Спецматематика 7 класс #1}
-	\end{minipage}
+    \begin{minipage}[h]{0.1\linewidth}
+        \includegraphics[width=1\linewidth]{./img/logo}
+    \end{minipage}
+    \begin{minipage}{0.86\linewidth}
+        \textbf{Творческая лаборатория <<ДваждыДва>> Спецматематика 7 класс #1}
+    \end{minipage}
 \begin{center}
 	\textbf{#2}
 \end{center}
 \setcounter{footnote}{0}
-	}
+}
  
 \newcommand{\del}{\mathop{\raisebox{-2pt}{\vdots}}}
-\newcommand{\skdel}{\mathop{\raisebox{-2pt}{~\vdots~}}}
 \newcommand{\ndel}{\mathop{\raisebox{-2pt}{\lefteqn{\vdots}}\setminus}}
-% \newcommand{\del}{~\vdots~}
-% \newcommand{\ndel}{~\mathrlap{\backslash}\vdots~}
+
+\newcommand{\skdel}{\mathop{\raisebox{-2pt}{~\vdots~}}}
+\newcommand{\nskdel}{\mathop{\raisebox{-2pt}{~\vdots~}}}
+
  
 \title{Курс спецматематики в листках для 7 класса}
 \author{Автор: Иванова Елена Юрьевна\\
@@ -69,9 +68,9 @@
 \date{\today}
 
 \begin{document}
-		\maketitle
-		\tableofcontents
-		\newpage
+\maketitle
+\tableofcontents
+\newpage
 \input{./part/0}
 \chapter{Четность}
 \input{./part/1.1}
@@ -96,5 +95,8 @@
 \input{./part/4.0}
 \input{./part/4.1}
 \input{./part/4.2}
-
+\input{./part/4.3}
+\input{./part/4.4}
+\chapter{Теория Множеств}
+\input{./part/5.0}
 \end{document}
