@@ -6,11 +6,12 @@
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
 \usepackage{mathtools}
-\usepackage{amsmath, amsthm,amsfonts,mathabx,amssymb,array,floatflt,titlesec,epigraph,indentfirst,graphicx,tabularx,subcaption}
+\usepackage{amsmath, amsthm,amsfonts,mathabx,amssymb,array,float,floatflt,titlesec,epigraph,indentfirst,graphicx,tabularx,subcaption}
+\usepackage{wasysym}
+\DeclareUnicodeCharacter{1F600}{\smiley}
 \usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm,includefoot,footskip=0.5cm]{geometry}
 
 \setlength{\parskip}{2pt}
-
 \setlength{\intextsep}{4pt}
 
 \titleformat{\section}{\centering\normalfont\bfseries}{}{1em}{}
@@ -38,6 +39,12 @@
 \newtheorem{dfn}{Определение}
 \newtheorem{ex}{Упражнение}
 \newtheorem{prop}{Свойство}
+
+\newtheoremstyle{myques}{3pt}{3pt}{}{\parindent}{\bfseries}{.}{.5em}{}
+\theoremstyle{myques}
+\newtheorem{ques}{Контрольный вопрос}
+
+
 	
 \newcommand{\head}[2]
 {\newpage
@@ -99,4 +106,9 @@
 \input{./part/4.4}
 \chapter{Теория Множеств}
 \input{./part/5.0}
+\input{./part/5.1}
+\input{./part/5.2}
+\input{./part/5.3}
+\chapter{Метод Математической Индукции}
+\input{./part/6.0}
 \end{document}
