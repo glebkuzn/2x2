@@ -12,8 +12,8 @@
 \usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm,includefoot,footskip=0.5cm]{geometry}
 \usepackage{tikz}
 \usepackage{wrapfig}
-
 \usepackage{enumitem}
+\usepackage{multirow}
 \makeatletter
 \AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
 \makeatother
@@ -38,6 +38,7 @@
 \newtheoremstyle{mypln}{3pt}{3pt}{}{\parindent}{\bfseries}{.}{.5em}{}
 \theoremstyle{mypln}
 \newtheorem{thm}[itm]{Задача}
+\newtheorem{thmF}[itm]{Весёлая задача}
 \newtheorem{prp}[itm]{Предложение}
 \newtheorem{lem}[itm]{Лемма}
 
@@ -45,8 +46,10 @@
 \theoremstyle{mydfn}
 \newtheorem{dfn}{Определение}
 \newtheorem{ex}{Упражнение}
+\newtheorem{exP}{Упражнение для программистов}
 \newtheorem{prop}{Свойство} 
 \newtheorem{thrm}{Теорема}
+\newtheorem{state}{Утверждение}
 
 \newtheoremstyle{myques}{3pt}{3pt}{}{\parindent}{\bfseries}{.}{.5em}{}
 \theoremstyle{myques}
@@ -96,15 +99,28 @@
 \input{./part/8.1}
 \input{./part/8.2}
 \input{./part/8.3}
+\input{./part/8.4}
+\input{./part/8.5}
 \chapter{Комбинаторика -- 2}
 \input{./part/9.0}
 \input{./part/9.1}
-\input{./part/10.3}
+\input{./part/10.0.0}
+\chapter{Графы}
 \input{./part/10.0}
 \input{./part/10.1}
-\input{./part/10.2}
+\input{./part/10.2.0}
+\input{./part/10.2.1}
+\input{./part/10.3}
 \input{./part/10.4}
-
+\input{./part/10.5}
+\input{./part/10.6}
+\input{./part/10.8}
+\chapter{Делимость целых чисел -- 2}
+\input{./part/11.0}
+\input{./part/11.1}
+\input{./part/11.2}
+\input{./part/11.3}
+\input{./part/11.4}
+\input{./part/11.5}
+\input{./part/11.6}
 \end{document}
-
-
